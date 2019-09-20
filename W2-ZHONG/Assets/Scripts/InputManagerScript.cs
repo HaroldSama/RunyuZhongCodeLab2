@@ -6,6 +6,7 @@ public class InputManagerScript : MonoBehaviour {
 	private GameManagerScript _gameManager;
 	private MoveTokensScript _moveManager;
 	private GameObject _selected = null;
+	public GameObject indicator;
 
 	public virtual void Start () {
 		_moveManager = GetComponent<MoveTokensScript>();
@@ -21,7 +22,10 @@ public class InputManagerScript : MonoBehaviour {
 			if(collider != null){
 				if(_selected == null){
 					_selected = collider.gameObject;
+					indicator.transform.position = _selected.transform.position;
+					indicator.SetActive(true);
 				} else {
+					indicator.SetActive(false);
 					Vector2 pos1 = _gameManager.GetPositionOfTokenInGrid(_selected);
 					Vector2 pos2 = _gameManager.GetPositionOfTokenInGrid(collider.gameObject);
 
