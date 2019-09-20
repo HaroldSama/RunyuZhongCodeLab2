@@ -1,9 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MatchManagerScript : MonoBehaviour {
 	
 	private GameManagerScript _gameManager;
+	public int score;
+	public Text scoreText;
 
 	public virtual void Start () {
 		_gameManager = GetComponent<GameManagerScript>();
@@ -184,7 +188,14 @@ public class MatchManagerScript : MonoBehaviour {
 			_gameManager.gridArray[(int)gridArrayIndex[i].x, (int)gridArrayIndex[i].y] = null;
 			numRemoved++;
 		}
+
+		score += numRemoved;
 		
 		return numRemoved;
+	}
+
+	private void Update()
+	{
+		scoreText.text = "Score: " + score;
 	}
 }
