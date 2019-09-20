@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class MatchManagerScript : MonoBehaviour {
 	
@@ -117,6 +118,8 @@ public class MatchManagerScript : MonoBehaviour {
 
 	public virtual int RemoveMatches(){
 		int numRemoved = 0;
+		List<GameObject> tokensToBeDestroyed = new List<GameObject>();
+		List<Vector2> gridArrayIndex = new List<Vector2>();
 
 		for(int x = 0; x < _gameManager.gridWidth; x++){
 			for(int y = 0; y < _gameManager.gridHeight ; y++){
@@ -128,10 +131,20 @@ public class MatchManagerScript : MonoBehaviour {
 
 						for(int i = x; i < x + horizonMatchLength; i++){
 							GameObject token = _gameManager.gridArray[i, y]; 
-							Destroy(token);
+							//Destroy(token);
+							if (!tokensToBeDestroyed.Contains(token))
+							{
+								tokensToBeDestroyed.Add(token);
+							}
+							
 
-							_gameManager.gridArray[i, y] = null;
-							numRemoved++;
+							//_gameManager.gridArray[i, y] = null;
+							//numRemoved++;
+							Vector2 index = new Vector2(i, y);
+							if (!gridArrayIndex.Contains(index))
+							{
+								gridArrayIndex.Add(index);
+							}
 						}
 					}
 				}
@@ -144,14 +157,32 @@ public class MatchManagerScript : MonoBehaviour {
 
 						for(int i = y; i < y + verticalMatchLength; i++){
 							GameObject token = _gameManager.gridArray[x, i]; 
-							Destroy(token);
+							//Destroy(token);
+							if (!tokensToBeDestroyed.Contains(token))
+							{
+								tokensToBeDestroyed.Add(token);
+							}
+							
 
-							_gameManager.gridArray[x, i] = null;
-							numRemoved++;
+							//_gameManager.gridArray[x, i] = null;
+							//numRemoved++;
+							Vector2 index = new Vector2(x, i);
+							if (!gridArrayIndex.Contains(index))
+							{
+								gridArrayIndex.Add(index);
+							}
 						}
 					}
 				}
 			}
+		}
+
+		for (int i = 0; i < tokensToBeDestroyed.Count; i++)
+		{
+
+			Destroy(tokensToBeDestroyed[i]);
+			_gameManager.gridArray[(int)gridArrayIndex[i].x, (int)gridArrayIndex[i].y] = null;
+			numRemoved++;
 		}
 		
 		return numRemoved;
