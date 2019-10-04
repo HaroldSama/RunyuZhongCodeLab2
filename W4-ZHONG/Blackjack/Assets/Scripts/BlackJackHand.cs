@@ -26,6 +26,13 @@ public class BlackJackHand : MonoBehaviour {
 		hand = new List<DeckOfCards.Card>();
 		HitMe();
 		HitMe();
+
+		if (handVals == 21)
+		{
+						
+			BlackJackManager manager = GameObject.Find("BlackJackManager").GetComponent<BlackJackManager>();
+			manager.PlayerWin();
+		}
 	}
 	
 	// Update is called once per frame
