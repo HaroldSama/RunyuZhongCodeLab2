@@ -10,6 +10,10 @@ public class BlackJackManager : MonoBehaviour {
 	public Text statusText;
 	public GameObject tryAgain;
 	public string loadScene;
+	public GameObject playerHand;
+	public GameObject dealerHand;
+	public Text playerHandText;
+	public Text dealerHandText;
 
 	public void PlayerBusted(){
 		HidePlayerButtons();
@@ -46,8 +50,28 @@ public class BlackJackManager : MonoBehaviour {
 		GameObject.Find("StayButton").SetActive(false);
 	}
 
-	public void TryAgain(){
-		SceneManager.LoadScene(loadScene);
+	public void TryAgain()
+	{
+		statusText.text = "";
+		playerHandText.text = "Player:";
+		dealerHandText.text = "Dealer:";
+		
+		tryAgain.SetActive(false);
+		foreach (Transform card in playerHand.transform)
+		{
+			Destroy(card.gameObject);
+		}
+
+		foreach (Transform card in dealerHand.transform)
+		{
+			Destroy(card.gameObject);
+		}
+
+		playerHand.GetComponent<BlackJackHand>().handVals = 0;
+		dealerHand.GetComponent<DealerHand>().handVals = 0;
+		dealerHand.GetComponent<DealerHand>().reveal = false;
+		
+		BetManager.Instance.ResetGameState(true);
 	}
 
 	public virtual int GetHandValue(List<DeckOfCards.Card> hand){

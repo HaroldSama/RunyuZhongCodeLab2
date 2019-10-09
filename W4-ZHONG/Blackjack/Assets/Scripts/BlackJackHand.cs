@@ -17,8 +17,8 @@ public class BlackJackHand : MonoBehaviour {
 	bool stay = false;
 
 	// Use this for initialization
-	void Start () {
-		//SetupHand();
+	void OnEnable () {
+		SetupHand();
 	}
 
 	protected virtual void SetupHand(){
