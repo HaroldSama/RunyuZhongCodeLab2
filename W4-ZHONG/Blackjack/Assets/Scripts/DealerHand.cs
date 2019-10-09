@@ -38,7 +38,7 @@ public class DealerHand : BlackJackHand {
 				} else if(!DealStay(handVals)){
 					Invoke("HitMe", 1);
 				} else {
-					BlackJackHand playerHand = GameObject.Find("Player Hand Value").GetComponent<BlackJackHand>();
+					BlackJackHand playerHand = GameObject.Find("Player Hand").GetComponent<BlackJackHand>();
 
 					if(handVals < playerHand.handVals){
 						manager.PlayerWin();
