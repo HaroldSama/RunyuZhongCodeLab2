@@ -14,28 +14,36 @@ public class BlackJackManager : MonoBehaviour {
 	public GameObject dealerHand;
 	public Text playerHandText;
 	public Text dealerHandText;
+	public GameObject hitButton;
+	public GameObject stayButton;
+	
 
 	public void PlayerBusted(){
 		HidePlayerButtons();
 		GameOverText("YOU BUST", Color.red);
+		BetManager.Instance.WinMoney(false);
 	}
 
 	public void DealerBusted(){
 		GameOverText("DEALER BUSTS!", Color.green);
+		BetManager.Instance.WinMoney();
 	}
 		
 	public void PlayerWin(){
 		GameOverText("YOU WIN!", Color.green);
+		BetManager.Instance.WinMoney();
 	}
 		
 	public void PlayerLose(){
 		GameOverText("YOU LOSE.", Color.red);
+		BetManager.Instance.WinMoney(false);
 	}
 
 
 	public void BlackJack(){
 		GameOverText("Black Jack!", Color.green);
 		HidePlayerButtons();
+		BetManager.Instance.WinMoney();
 	}
 
 	public void GameOverText(string str, Color color){
@@ -46,8 +54,8 @@ public class BlackJackManager : MonoBehaviour {
 	}
 
 	public void HidePlayerButtons(){
-		GameObject.Find("HitButton").SetActive(false);
-		GameObject.Find("StayButton").SetActive(false);
+		hitButton.SetActive(false);
+		stayButton.SetActive(false);
 	}
 
 	public void TryAgain()

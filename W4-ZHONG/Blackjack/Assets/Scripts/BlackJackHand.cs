@@ -30,8 +30,8 @@ public class BlackJackHand : MonoBehaviour {
 		if (handVals == 21)
 		{
 			BlackJackManager manager = GameObject.Find("BlackJackManager").GetComponent<BlackJackManager>();
-			manager.PlayerWin();
-			manager.HidePlayerButtons();
+			manager.BlackJack();
+			//manager.HidePlayerButtons();
 		}
 	}
 	

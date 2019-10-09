@@ -39,14 +39,12 @@ public class BetManager : MonoBehaviour
             return;
         }
         
-        ResetGameState();
-        
         yourBet = amount;
         yourBetText.text = "Your Bet: $" + amount;
         yourMoney -= amount;
-        yourMoneyText.text = "You Have: $" + yourMoney;
-
+        yourMoneyText.text = "You Have: $" + yourMoney; 
         
+        ResetGameState();
     }
 
     public void ResetGameState(bool toBet = false)
@@ -59,6 +57,15 @@ public class BetManager : MonoBehaviour
         foreach (var obj in objcetsForGame)
         {
             obj.SetActive(!toBet);
+        }
+    }
+
+    public void WinMoney(bool win = true)
+    {
+        if (win)
+        {
+            yourMoney += yourBet * 2;
+            yourMoneyText.text = "You Have: $" + yourMoney;        
         }
 
         yourBet = 0;
