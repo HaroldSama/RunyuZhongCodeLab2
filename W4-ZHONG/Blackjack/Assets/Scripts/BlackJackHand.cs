@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -57,14 +58,29 @@ public class BlackJackHand : MonoBehaviour {
 		cardObj.name = card.ToString();
 
 		cardObj.transform.SetParent(handBase.transform);
+
+		List<GameObject> cardList = new List<GameObject>();
+
+		foreach (Transform cardTransform in handBase.transform)
+		{
+			cardList.Add(cardTransform.gameObject);
+		}
+		
 		cardObj.GetComponent<RectTransform>().localScale = new Vector2(1, 1);
-		cardObj.GetComponent<RectTransform>().anchoredPosition = 
+		/*cardObj.GetComponent<RectTransform>().anchoredPosition = 
 			new Vector2(
 				xOffset + pos * 110, 
-				yOffset);
+				yOffset);*/
 
 		cardObj.GetComponentInChildren<Text>().text = deck.GetNumberString(card);
 		cardObj.GetComponentsInChildren<Image>()[1].sprite = deck.GetSuitSprite(card);
+
+		for (int i = 0; i < cardList.Count; i++)
+		{
+			float spacing = Mathf.Clamp(110, 0, 330 / Mathf.Clamp(cardList.Count - 1, 1, Mathf.Infinity));
+
+			cardList[i].GetComponent<RectTransform>().anchoredPosition = new Vector2(spacing * (i - (cardList.Count - 1) / 2f), yOffset);
+		}
 	}
 
 	protected virtual void ShowValue(){
