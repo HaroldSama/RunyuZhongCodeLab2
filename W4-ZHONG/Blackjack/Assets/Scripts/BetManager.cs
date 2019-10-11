@@ -13,6 +13,7 @@ public class BetManager : MonoBehaviour
     public Text yourBetText;
     public List<GameObject> objectsForBet;
     public List<GameObject> objcetsForGame;
+    public GameObject youBrokeText;
 
     private void Awake()
     {
@@ -49,11 +50,18 @@ public class BetManager : MonoBehaviour
 
     public void ResetGameState(bool toBet = false)
     {
-        foreach (var obj in objectsForBet)
+        if (toBet && yourMoney <= 0)
         {
-            obj.SetActive(toBet);
+            youBrokeText.SetActive(true);
         }
-        
+        else
+        {
+            foreach (var obj in objectsForBet) 
+            {
+                obj.SetActive(toBet);
+            }        
+        }
+
         foreach (var obj in objcetsForGame)
         {
             obj.SetActive(!toBet);
