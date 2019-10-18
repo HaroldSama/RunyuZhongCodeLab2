@@ -68,12 +68,14 @@ public class AStarScript : MonoBehaviour {
 				break;
 			}
 			
+			for(var y = -1; y < 2; y+=2){
+				AddNodesToFrontier((int)_current.x, (int)_current.y + y);
+			}			
+			
 			for(var x = -1; x < 2; x+=2){
 				AddNodesToFrontier((int)_current.x + x, (int)_current.y);
 			}
-			for(var y = -1; y < 2; y+=2){
-				AddNodesToFrontier((int)_current.x, (int)_current.y + y);
-			}
+
 		}
 
 		_current = _goal;

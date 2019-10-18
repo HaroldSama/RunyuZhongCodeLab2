@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731316, g: 0.38074896, b: 0.3587254, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -120,6 +120,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &445653058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6933604912268490403, guid: 98435b62edc8a4e5ea9481af7785c6da,
+    type: 3}
+  m_PrefabInstance: {fileID: 6933604912268830134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &445653059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445653058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f3937d2c6dc584a9b9d13cef52cd19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1058467914
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,5 +535,11 @@ PrefabInstance:
       propertyPath: gridScript
       value: 
       objectReference: {fileID: 1792175003}
-    m_RemovedComponents: []
+    - target: {fileID: 6933604912268490414, guid: 98435b62edc8a4e5ea9481af7785c6da,
+        type: 3}
+      propertyPath: hueristic
+      value: 
+      objectReference: {fileID: 445653059}
+    m_RemovedComponents:
+    - {fileID: 6933604912268490415, guid: 98435b62edc8a4e5ea9481af7785c6da, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 98435b62edc8a4e5ea9481af7785c6da, type: 3}
