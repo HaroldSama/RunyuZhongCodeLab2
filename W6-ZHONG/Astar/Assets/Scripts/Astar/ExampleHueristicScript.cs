@@ -9,9 +9,6 @@ public class ExampleHueristicScript : HueristicScript {
 	{
 
 		return 0;
-
-
-
 	}
 
 }
