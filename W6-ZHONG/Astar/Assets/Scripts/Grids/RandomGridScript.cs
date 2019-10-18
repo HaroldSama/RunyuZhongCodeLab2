@@ -21,6 +21,11 @@ public class RandomGridScript : GridScript
 		{
 			gridString[i] = RandomizeLine(gridWidth);
 		}
+
+		start.x = Random.Range(0, gridWidth);
+		start.y = Random.Range(0, gridHeight);
+		goal.x = Random.Range(0, gridWidth);
+		goal.y = Random.Range(0, gridHeight);
 	}
 	
 	String RandomizeLine(int length)
