@@ -8,7 +8,7 @@ public class Model
     {
         Empty = 0,
         Circle = 1,
-        Cross = 2,
+        Cross = -1,
     }
 
     public Mark[,] board = new Mark[3,3];
@@ -24,13 +24,13 @@ public class Model
 
         board[pos.x, pos.y] = turn;
 
-        if (!CheckLine(pos))
+        if (CheckLine(pos))
         {
-            turn = (Mark)((int)turn % 2 + 1);
+            endGame = true;
         }
         else
         {
-            endGame = true;
+            turn = (Mark)(-(int)turn);
         }
     }
 
