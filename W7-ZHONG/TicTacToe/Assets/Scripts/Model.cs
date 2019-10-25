@@ -6,62 +6,44 @@ public class Model
 {
     public enum Mark
     {
-        Circle,
-        Cross,
-        Empty,
+        Empty = 0,
+        Circle = 1,
+        Cross = 2,
     }
 
     public Mark[,] board = new Mark[3,3];
-    public bool isCircleTurn;
-    public Mark winSide = Mark.Empty;
+    public Mark turn = Mark.Circle;
     public bool endGame;
 
-    public void PlaceMark(Vector2Int pos)
+    public bool PlaceMark(Vector2Int pos)
     {
-        if (pos.x < 0 || pos.x > 2)
-        {
-            return;
-        }
-
-        if (pos.y < 0 || pos.y > 2)
-        {
-            return;
-        }
-
         if (board[pos.x, pos.y] != Mark.Empty)
         {
-            return;
+            return false;
         }
 
-        if (isCircleTurn)
+        board[pos.x, pos.y] = turn;
+
+        if (CheckLine(pos) == Mark.Empty)
         {
-            board[pos.x, pos.y] = Mark.Circle;
+            turn = (Mark)((int)turn % 2 + 1);
         }
         else
         {
-            board[pos.x, pos.y] = Mark.Cross;
+            WinnerIs(turn);
         }
 
-        winSide = CheckLine(pos);
-
-        if (winSide == Mark.Empty)
-        {
-            isCircleTurn = !isCircleTurn;
-        }
-        else
-        {
-            WinnerIs(winSide);
-        }
+        return true;
     }
 
-    public Mark CheckLine(Vector2Int pos)
+    private Mark CheckLine(Vector2Int pos)
     {
-        if ((board[pos.x, pos.y] == board[pos.x, (pos.y + 1) % 3] && board[pos.x, pos.y] == board[pos.x, (pos.y + 2) % 3]) ||
-            (board[pos.x, pos.y] == board[(pos.x + 1) % 3, pos.y] && board[pos.x, pos.y] == board[(pos.x + 2) % 3, pos.y]) ||
-            (board[0,0] == board[1,1] && board[0,0] == board[2,2]) ||
-            (board[2,0] == board[1,1] && board[2,0] == board[0,2]))
+        if ((board[pos.x, pos.y] == turn && board[pos.x, (pos.y + 1) % 3] == turn && board[pos.x, (pos.y + 2) % 3] == turn) ||
+            (board[pos.x, pos.y] == turn && board[(pos.x + 1) % 3, pos.y] == turn && board[(pos.x + 2) % 3, pos.y] == turn) ||
+            (board[0,0] == turn && board[1,1] == turn && board[2,2] == turn) ||
+            (board[2,0] == turn && board[2,0] == turn && board[0,2] == turn))
         {
-            return board[pos.x, pos.y];
+            return turn;
         }
 
         return Mark.Empty;
