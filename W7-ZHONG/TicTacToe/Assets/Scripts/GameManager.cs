@@ -2,13 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public Model model = new Model();
     public View view = new View();
-    public Controll control = new Controll();
+    public Control control = new Control();
     public Transform markHolder;
+    public Text winText;
 
     private bool _waitingToRestart;
 
@@ -16,12 +18,18 @@ public class GameManager : MonoBehaviour
     {
         if (_waitingToRestart)
         {
+            if (control.ConfirmRestart())
+            {
+                ResetGame();
+            }
+            
             return;
         }
         
         if (model.endGame)
         {
-            _waitingToRestart = false;
+            winText.text = model.turn + " Wins. Press [R] to restart.";
+            _waitingToRestart = true;
             return;
         }
         
@@ -36,9 +44,24 @@ public class GameManager : MonoBehaviour
 
         if (newMark)
         {
-            newMark.transform.parent = markHolder;
+            newMark.transform.SetParent(markHolder);
         }
         
         model.PlaceMark(pos);
+    }
+
+    void ResetGame()
+    {
+        winText.text = "";
+        model = new Model();
+        view = new View();
+        control = new Control();
+
+        foreach (Transform mark in markHolder.transform)
+        {
+            Destroy(mark.gameObject);
+        }
+
+        _waitingToRestart = false;
     }
 }

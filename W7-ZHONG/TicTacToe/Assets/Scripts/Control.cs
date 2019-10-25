@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Controll
+public class Control
 {
     public Vector2Int Update()
     {
@@ -52,5 +52,10 @@ public class Controll
         }
 
         return new Vector2Int(-1, -1);
+    }
+
+    public bool ConfirmRestart()
+    {
+        return Input.GetKeyDown(KeyCode.R);
     }
 }
