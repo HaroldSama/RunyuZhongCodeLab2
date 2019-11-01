@@ -71,7 +71,7 @@
       <workItem from="1568406365549" duration="172000" />
       <workItem from="1568407238622" duration="129000" />
       <workItem from="1568407916381" duration="189000" />
-      <workItem from="1572619510730" duration="2370000" />
+      <workItem from="1572619510730" duration="3035000" />
     </task>
     <task id="LOCAL-00001" summary="Initiate Week3 Homework">
       <created>1568406436419</created>
@@ -101,11 +101,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572624195752</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="LuaBalt - Some struggles but nothing changes :(">
+      <created>1572625586555</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572625586555</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3690000" />
+    <option name="totallyTimeSpent" value="4355000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -195,7 +202,8 @@
     <MESSAGE value="LuaBalt - Initialize" />
     <MESSAGE value="LuaBalt - Stop the game if player fall off the screen" />
     <MESSAGE value="LuaBalt - Fix the bug that buildings disappear before exiting the screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="LuaBalt - Fix the bug that buildings disappear before exiting the screen" />
+    <MESSAGE value="LuaBalt - Some struggles but nothing changes :(" />
+    <option name="LAST_COMMIT_MESSAGE" value="LuaBalt - Some struggles but nothing changes :(" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

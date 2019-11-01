@@ -119,12 +119,14 @@ function love.update(dt)
     return
   end
 
+  bodyX = body:getX()
   bodyY = body:getY()
   
   if bodyY > 600 then
     gameRunning = false
   end
 
+  text = "Distance: "..tostring(bodyX - 400)
 
   currentAnim:update(dt)
   world:update(dt)
