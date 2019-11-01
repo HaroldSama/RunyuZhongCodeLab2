@@ -66,6 +66,7 @@ function love.load()
 
   building1 = building:makeBuilding(750, 16)
   building2 = building:makeBuilding(1200, 16)
+  --building3 = building:makeBuilding(1650, 16)
 
   playerImg = love.graphics.newImage("media/player2.png")
   -- Create a Body for the player.
@@ -111,6 +112,8 @@ end
 function love.update(dt)
 
   if gameRunning == false then
+    text = "Game Over"
+    print (text)
     return
   end
 
@@ -124,8 +127,9 @@ function love.update(dt)
   currentAnim:update(dt)
   world:update(dt)
 
-  building1:update(body, dt, building2)
-  building2:update(body, dt, building1)
+  --building3:update(body, dt, building1)
+  building1:update(body, dt, building1)
+  building2:update(body, dt, building2)
 
   updateTilesetBatch()
 
@@ -171,6 +175,7 @@ function updateTilesetBatch()
 
   building1:draw(tilesetBatch, tileQuads);
   building2:draw(tilesetBatch, tileQuads);
+  --building3:draw(tilesetBatch, tileQuads);
 
   tilesetBatch:flush()
 end
