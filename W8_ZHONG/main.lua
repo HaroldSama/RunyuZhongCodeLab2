@@ -113,7 +113,14 @@ function love.update(dt)
   if gameRunning == false then
     return
   end
+
+  bodyY = body:getY()
   
+  if bodyY > 600 then
+    gameRunning = false
+  end
+
+
   currentAnim:update(dt)
   world:update(dt)
 
