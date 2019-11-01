@@ -112,8 +112,10 @@ end
 function love.update(dt)
 
   if gameRunning == false then
+
     text = "Game Over"
-    print (text)
+    --print (text)
+
     return
   end
 
@@ -187,6 +189,14 @@ function love.keypressed( key, isrepeat )
     currentAnim:gotoFrame(1)
     time = love.timer.getTime( )
   end
+
+  --[[if key == "q" then
+
+    text = "Quit"
+    print (text)    
+
+    self:love.quit()
+  end--]]
 end
 
 -- This is called every time a collision begin.
@@ -195,9 +205,9 @@ function beginContact(bodyA, bodyB, coll)
   local bData =bodyB:getUserData()
 
   cx,cy = coll:getNormal()
-  text = text.."\n"..aData.." colliding with "..bData.." with a vector normal of: "..cx..", "..cy
+  --text = text.."\n"..aData.." colliding with "..bData.." with a vector normal of: "..cx..", "..cy
 
-  print (text)
+  --print (text)
 
   if(aData == "Player" or bData == "Player") then
 
@@ -215,7 +225,7 @@ function endContact(bodyA, bodyB, coll)
   onGround = false
   local aData=bodyA:getUserData()
   local bData=bodyB:getUserData()
-  text = "Collision ended: " .. aData .. " and " .. bData
+  --text = "Collision ended: " .. aData .. " and " .. bData
 
   if(aData == "Player" or bData == "Player") then
     runSound:stop();

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7938acdb-6d40-4fcb-a585-670c1aa7731d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RunyuZhongCodeLab2.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RunyuZhongCodeLab2.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W8_ZHONG/building.lua" beforeDir="false" afterPath="$PROJECT_DIR$/W8_ZHONG/building.lua" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/W8_ZHONG/main.lua" beforeDir="false" afterPath="$PROJECT_DIR$/W8_ZHONG/main.lua" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,7 +71,7 @@
       <workItem from="1568406365549" duration="172000" />
       <workItem from="1568407238622" duration="129000" />
       <workItem from="1568407916381" duration="189000" />
-      <workItem from="1572619510730" duration="1750000" />
+      <workItem from="1572619510730" duration="2370000" />
     </task>
     <task id="LOCAL-00001" summary="Initiate Week3 Homework">
       <created>1568406436419</created>
@@ -95,11 +94,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572621580435</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="LuaBalt - Fix the bug that buildings disappear before exiting the screen">
+      <created>1572624195752</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572624195752</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3070000" />
+    <option name="totallyTimeSpent" value="3690000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -188,7 +194,8 @@
     <MESSAGE value="Initiate Week3 Homework" />
     <MESSAGE value="LuaBalt - Initialize" />
     <MESSAGE value="LuaBalt - Stop the game if player fall off the screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="LuaBalt - Stop the game if player fall off the screen" />
+    <MESSAGE value="LuaBalt - Fix the bug that buildings disappear before exiting the screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="LuaBalt - Fix the bug that buildings disappear before exiting the screen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
