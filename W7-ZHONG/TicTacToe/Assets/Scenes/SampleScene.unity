@@ -228,6 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   markHolder: {fileID: 672026006}
   winText: {fileID: 67925414}
+  vsAi: 1
 --- !u!4 &113838190
 Transform:
   m_ObjectHideFlags: 0

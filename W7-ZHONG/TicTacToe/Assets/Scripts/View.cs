@@ -14,11 +14,11 @@ public class View
         
         if (markToPut == Model.Mark.Circle)
         {
-            return (GameObject)MonoBehaviour.Instantiate(Resources.Load("Circle"), new Vector3(pos.x, pos.y), Quaternion.identity);
+            return (GameObject)Object.Instantiate(Resources.Load("Circle"), new Vector3(pos.x, pos.y), Quaternion.identity);
         }
         else
         {
-            return (GameObject)MonoBehaviour.Instantiate(Resources.Load("Cross"), new Vector3(pos.x, pos.y), Quaternion.identity);
+            return (GameObject)Object.Instantiate(Resources.Load("Cross"), new Vector3(pos.x, pos.y), Quaternion.identity);
         }
     }
 }

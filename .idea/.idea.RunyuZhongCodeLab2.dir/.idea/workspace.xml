@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7938acdb-6d40-4fcb-a585-670c1aa7731d" name="Default Changelist" comment="Initiate Week3 Homework">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RunyuZhongCodeLab2.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RunyuZhongCodeLab2.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/W7-ZHONG/TicTacToe/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/W7-ZHONG/TicTacToe/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/W7-ZHONG/TicTacToe/Assets/Scripts/View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/W7-ZHONG/TicTacToe/Assets/Scripts/View.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +66,7 @@
       <workItem from="1568406365549" duration="172000" />
       <workItem from="1568407238622" duration="129000" />
       <workItem from="1568407916381" duration="189000" />
+      <workItem from="1572619510730" duration="465000" />
     </task>
     <task id="LOCAL-00001" summary="Initiate Week3 Homework">
       <created>1568406436419</created>
@@ -76,7 +79,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1320000" />
+    <option name="totallyTimeSpent" value="1785000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -90,7 +93,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
