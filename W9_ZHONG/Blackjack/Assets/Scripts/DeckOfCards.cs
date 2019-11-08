@@ -10,6 +10,7 @@ public class DeckOfCards : MonoBehaviour {
 	public Image cardImageUI;
 	public Sprite[] cardSuits;
 	public TextMeshProUGUI cardsInDeck;
+	public Card nextCard;
 
 	public class Card{
 
@@ -81,8 +82,8 @@ public class DeckOfCards : MonoBehaviour {
 			AddCardsToDeck();
 		}
 
-		Debug.Log("Cards in Deck: " + (deck.cursor + 1));
-		cardsInDeck.text = (deck.cursor + 1).ToString();
+		//Debug.Log("Cards in Deck: " + (deck.cursor + 1));
+		cardsInDeck.text = ((deck.cursor + 1) % deck.Count + 1).ToString();
 	}
 
 	protected virtual bool IsValidDeck(){
@@ -95,22 +96,42 @@ public class DeckOfCards : MonoBehaviour {
 				deck.Add(new Card(type, suit));
 			}
 		}
+
+		nextCard = deck.Next();
+		print("Next: " + nextCard.suit + " " + nextCard.cardNum);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	}
 
-	public virtual Card DrawCard(){
-		Card nextCard = deck.Next();
+	public virtual Card DrawCard(bool justPeek = false){
+		//Card nextCard = deck.Next();
+
+		Card toReturn = nextCard;
+		
+
+		if (!justPeek)
+		{
+			nextCard = deck.Next();
+		}
 
 		//deck.Remove(nextCard);
 		
-		Debug.Log("Cards in Deck: " + (deck.cursor + 1));
-		cardsInDeck.text = (deck.cursor + 1).ToString();
+		//Debug.Log("Cards in Deck: " + (deck.cursor + 1));
+		
+		cardsInDeck.text = ((deck.cursor + 1) % deck.Count + 1).ToString();
+		print("Next: " + nextCard.suit + " " + nextCard.cardNum);
+
+		return toReturn;
+	}
+
+	/*public virtual Card PeekNextCard()
+	{
+		Card nextCard = deck.Next();
 
 		return nextCard;
-	}
+	}*/
 
 
 	public string GetNumberString(Card card){
