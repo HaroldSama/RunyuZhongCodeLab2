@@ -10,7 +10,7 @@ public class Skills : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private RectTransform _rt;
     private bool _up;
-    public int mP = 10;
+    public static int mP = 10;
     public RectTransform nextCard;
     public RectTransform nextCardBack;
     public Text mPText;

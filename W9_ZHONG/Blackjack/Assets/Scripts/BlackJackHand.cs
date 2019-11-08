@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using Random = UnityEngine.Random;
 
 
 public class BlackJackHand : MonoBehaviour {
@@ -52,6 +53,26 @@ public class BlackJackHand : MonoBehaviour {
 
 			ShowValue();
 		}
+	}
+
+	public void HitMeWithAce()
+	{
+		if (Skills.mP < 3)
+		{
+			return;
+		}
+
+		Skills.mP -= 3;
+		
+		DeckOfCards.Card card = new DeckOfCards.Card(DeckOfCards.Card.Type.A, (DeckOfCards.Card.Suit)Random.Range(0, 4));
+		
+		GameObject cardObj = Instantiate(Resources.Load("prefab/Card")) as GameObject;
+
+		ShowCard(card, cardObj, hand.Count);
+
+		hand.Add(card);
+
+		ShowValue();
 	}
 
 	protected void ShowCard(DeckOfCards.Card card, GameObject cardObj, int pos){
