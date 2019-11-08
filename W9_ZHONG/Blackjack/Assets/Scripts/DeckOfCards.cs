@@ -106,7 +106,7 @@ public class DeckOfCards : MonoBehaviour {
 		nextCard = deck.Next();
 		nextCardObj.GetComponentInChildren<Text>().text = GetNumberString(nextCard);
 		nextCardObj.GetComponentsInChildren<Image>()[1].sprite = GetSuitSprite(nextCard);
-		print("Next: " + nextCard.suit + " " + nextCard.cardNum);		
+		//print("Next: " + nextCard.suit + " " + nextCard.cardNum);		
 	}
 
 	public virtual Card DrawCard(bool justPeek = false){

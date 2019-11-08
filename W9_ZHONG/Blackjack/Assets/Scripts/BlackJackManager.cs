@@ -16,6 +16,7 @@ public class BlackJackManager : MonoBehaviour {
 	public Text dealerHandText;
 	public GameObject hitButton;
 	public GameObject stayButton;
+	public GameObject cheatBoard;
 	
 
 	public void PlayerBusted(){
@@ -56,6 +57,7 @@ public class BlackJackManager : MonoBehaviour {
 	public void HidePlayerButtons(){
 		hitButton.SetActive(false);
 		stayButton.SetActive(false);
+		cheatBoard.SetActive(false);
 	}
 
 	public void TryAgain()
