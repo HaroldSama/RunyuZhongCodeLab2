@@ -11,6 +11,7 @@ public class DeckOfCards : MonoBehaviour {
 	public Sprite[] cardSuits;
 	public TextMeshProUGUI cardsInDeck;
 	public Card nextCard;
+	public GameObject nextCardObj;
 
 	public class Card{
 
@@ -97,12 +98,15 @@ public class DeckOfCards : MonoBehaviour {
 			}
 		}
 
-		nextCard = deck.Next();
-		print("Next: " + nextCard.suit + " " + nextCard.cardNum);
+        SetNextCard();
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	void SetNextCard()
+	{
+		nextCard = deck.Next();
+		nextCardObj.GetComponentInChildren<Text>().text = GetNumberString(nextCard);
+		nextCardObj.GetComponentsInChildren<Image>()[1].sprite = GetSuitSprite(nextCard);
+		print("Next: " + nextCard.suit + " " + nextCard.cardNum);		
 	}
 
 	public virtual Card DrawCard(bool justPeek = false){
@@ -113,7 +117,7 @@ public class DeckOfCards : MonoBehaviour {
 
 		if (!justPeek)
 		{
-			nextCard = deck.Next();
+			SetNextCard();
 		}
 
 		//deck.Remove(nextCard);
