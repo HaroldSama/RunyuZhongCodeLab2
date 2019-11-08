@@ -125,8 +125,6 @@ public class DeckOfCards : MonoBehaviour {
 		//Debug.Log("Cards in Deck: " + (deck.cursor + 1));
 		
 		cardsInDeck.text = ((deck.cursor + 1) % deck.Count + 1).ToString();
-		print("Next: " + nextCard.suit + " " + nextCard.cardNum);
-
 		return toReturn;
 	}
 

@@ -17,6 +17,7 @@ public class BlackJackManager : MonoBehaviour {
 	public GameObject hitButton;
 	public GameObject stayButton;
 	public GameObject cheatBoard;
+	public Skills skills;
 	
 
 	public void PlayerBusted(){
@@ -82,6 +83,8 @@ public class BlackJackManager : MonoBehaviour {
 		dealerHand.GetComponent<DealerHand>().reveal = false;
 		
 		BetManager.Instance.ResetGameState(true);
+
+		skills.mP = Mathf.Clamp(skills.mP + 1, 0, 10);
 	}
 
 	public virtual int GetHandValue(List<DeckOfCards.Card> hand){
