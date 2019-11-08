@@ -8,7 +8,7 @@ using System.Collections.Generic;
 public class ShuffleBag<T> : ICollection<T>, IList<T>
 {
 	private List<T> data = new List<T> ();
-	private int cursor = 0;
+	public int cursor = 0;
 	private T last;
 
 	public int Cursor{

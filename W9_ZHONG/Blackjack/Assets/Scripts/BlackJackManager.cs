@@ -61,7 +61,7 @@ public class BlackJackManager : MonoBehaviour {
 	public void TryAgain()
 	{
 		statusText.text = "";
-		playerHandText.text = "Player:";
+		playerHandText.text = "You:";
 		dealerHandText.text = "Dealer:";
 		
 		tryAgain.SetActive(false);

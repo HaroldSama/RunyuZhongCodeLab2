@@ -2,12 +2,14 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class DeckOfCards : MonoBehaviour {
 	
 	public Text cardNumUI;
 	public Image cardImageUI;
 	public Sprite[] cardSuits;
+	public TextMeshProUGUI cardsInDeck;
 
 	public class Card{
 
@@ -79,7 +81,8 @@ public class DeckOfCards : MonoBehaviour {
 			AddCardsToDeck();
 		}
 
-		Debug.Log("Cards in Deck: " + deck.Count);
+		Debug.Log("Cards in Deck: " + (deck.cursor + 1));
+		cardsInDeck.text = (deck.cursor + 1).ToString();
 	}
 
 	protected virtual bool IsValidDeck(){
@@ -100,6 +103,11 @@ public class DeckOfCards : MonoBehaviour {
 
 	public virtual Card DrawCard(){
 		Card nextCard = deck.Next();
+
+		//deck.Remove(nextCard);
+		
+		Debug.Log("Cards in Deck: " + (deck.cursor + 1));
+		cardsInDeck.text = (deck.cursor + 1).ToString();
 
 		return nextCard;
 	}

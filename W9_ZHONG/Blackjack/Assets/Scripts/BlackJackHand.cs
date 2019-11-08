@@ -86,7 +86,7 @@ public class BlackJackHand : MonoBehaviour {
 	protected virtual void ShowValue(){
 		handVals = GetHandValue();
 			
-		total.text = "Player: " + handVals;
+		total.text = "You: " + handVals;
 
 		if(handVals > 21){
 			GameObject.Find("BlackJackManager").GetComponent<BlackJackManager>().PlayerBusted();
