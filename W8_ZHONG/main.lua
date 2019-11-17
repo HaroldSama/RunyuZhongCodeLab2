@@ -169,6 +169,8 @@ function love.draw()
   --love.graphics.polygon("line", building2.shape:getPoints())
 
   love.graphics.setColor(255, 255, 255)
+
+  --draw building
   love.graphics.draw(tilesetBatch, 0, 0, 0, 1, 1)
 end
 
