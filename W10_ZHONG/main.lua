@@ -20,6 +20,17 @@ triangle = {
 	v3 = 3
 }
 
+line = {
+	p1 = 1,
+	p2 = 2,
+}
+
+chart = {
+    lightStars,
+    lines,
+    finished
+}
+
 function love.load()
 	width = 800
 	height = 600
@@ -34,22 +45,11 @@ end
 
 function love.draw()
 
-	for i in ipairs(triangles) do
-	  love.graphics.setColor(255, 255, 255)
-	  love.graphics.line(coins[triangles[i].v1].x, coins[triangles[i].v1].y, coins[triangles[i].v2].x, coins[triangles[i].v2].y, coins[triangles[i].v3].x, coins[triangles[i].v3].y, coins[triangles[i].v1].x, coins[triangles[i].v1].y)
-	end
+    drawLevel(coins, triangles, 0, 50)
 
+    love.graphics.setColor(255, 255, 255)
     love.graphics.print(text, 10, 10)
 	--love.graphics.rectangle("line", 200, 200, 400, 200)
-
-	for i in ipairs(coins) do
-	  love.graphics.setColor(255, 255, 255)
-	  love.graphics.circle("fill", coins[i].x, coins[i].y, coins[i].radius)
-	  if coins[i].head then
-	  	love.graphics.setColor(0, 0, 0)
-        love.graphics.circle("fill", coins[i].x, coins[i].y, coins[i].radius - 5)
-      end  
-	end
 end
 
 function love.mousepressed(x, y, button, istouch)
@@ -143,3 +143,21 @@ function loadLevel()
   text = "Click inside a triangle to light/unlight the stars on it's vertices. Light all stars to win."
 end
 
+function drawLevel(coins, triangles, origin, scale)
+	for i in ipairs(triangles) do
+	  love.graphics.setColor(255, 255, 255)
+	  love.graphics.line(coins[triangles[i].v1].x, coins[triangles[i].v1].y, coins[triangles[i].v2].x, coins[triangles[i].v2].y, coins[triangles[i].v3].x, coins[triangles[i].v3].y, coins[triangles[i].v1].x, coins[triangles[i].v1].y)
+	end
+
+	for i in ipairs(coins) do
+	  love.graphics.setColor(255, 255, 255)
+	  love.graphics.circle("fill", coins[i].x, coins[i].y, coins[i].radius)
+	  if coins[i].head then
+	  	love.graphics.setColor(0, 0, 0)
+        love.graphics.circle("fill", coins[i].x, coins[i].y, coins[i].radius - 5)
+      end  
+	end
+end
+
+function drawChart(chart, origin, scale)
+end

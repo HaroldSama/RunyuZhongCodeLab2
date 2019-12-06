@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7938acdb-6d40-4fcb-a585-670c1aa7731d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RunyuZhongCodeLab2.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RunyuZhongCodeLab2.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W8_ZHONG/main.lua" beforeDir="false" afterPath="$PROJECT_DIR$/W8_ZHONG/main.lua" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +25,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -71,7 +70,9 @@
       <workItem from="1568406365549" duration="172000" />
       <workItem from="1568407238622" duration="129000" />
       <workItem from="1568407916381" duration="189000" />
-      <workItem from="1572619510730" duration="3035000" />
+      <workItem from="1572619510730" duration="3167000" />
+      <workItem from="1573829110166" duration="205000" />
+      <workItem from="1573951027688" duration="89000" />
     </task>
     <task id="LOCAL-00001" summary="Initiate Week3 Homework">
       <created>1568406436419</created>
@@ -108,11 +109,32 @@
       <option name="project" value="LOCAL" />
       <updated>1572625586555</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="LuaBalt - Keep track on the distance you run">
+      <created>1572626801485</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572626801485</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Love2D project - testing">
+      <created>1573829289691</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1573829289691</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Love2D project - prototyping finish">
+      <created>1573951114536</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1573951114536</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4355000" />
+    <option name="totallyTimeSpent" value="4781000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -126,7 +148,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -203,7 +225,10 @@
     <MESSAGE value="LuaBalt - Stop the game if player fall off the screen" />
     <MESSAGE value="LuaBalt - Fix the bug that buildings disappear before exiting the screen" />
     <MESSAGE value="LuaBalt - Some struggles but nothing changes :(" />
-    <option name="LAST_COMMIT_MESSAGE" value="LuaBalt - Some struggles but nothing changes :(" />
+    <MESSAGE value="LuaBalt - Keep track on the distance you run" />
+    <MESSAGE value="Love2D project - testing" />
+    <MESSAGE value="Love2D project - prototyping finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="Love2D project - prototyping finish" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -3,7 +3,7 @@ coin = {
 	y = 0,
 	radius = 20,
 	head = true,
-	value = 25
+	--value = 25
 }
 
 function coin:flip()
