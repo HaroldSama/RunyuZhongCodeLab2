@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7938acdb-6d40-4fcb-a585-670c1aa7731d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RunyuZhongCodeLab2.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RunyuZhongCodeLab2.dir/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7938acdb-6d40-4fcb-a585-670c1aa7731d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +71,7 @@
       <workItem from="1572619510730" duration="3167000" />
       <workItem from="1573829110166" duration="205000" />
       <workItem from="1573951027688" duration="89000" />
+      <workItem from="1575616118819" duration="117000" />
     </task>
     <task id="LOCAL-00001" summary="Initiate Week3 Homework">
       <created>1568406436419</created>
@@ -130,11 +129,18 @@
       <option name="project" value="LOCAL" />
       <updated>1573951114536</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="(final) Constellation Lighter - draw levels by function according to origin and scale">
+      <created>1575616206025</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575616206025</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4781000" />
+    <option name="totallyTimeSpent" value="4898000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -148,7 +154,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26865673" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -228,7 +234,8 @@
     <MESSAGE value="LuaBalt - Keep track on the distance you run" />
     <MESSAGE value="Love2D project - testing" />
     <MESSAGE value="Love2D project - prototyping finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="Love2D project - prototyping finish" />
+    <MESSAGE value="(final) Constellation Lighter - draw levels by function according to origin and scale" />
+    <option name="LAST_COMMIT_MESSAGE" value="(final) Constellation Lighter - draw levels by function according to origin and scale" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

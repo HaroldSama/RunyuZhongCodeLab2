@@ -1,7 +1,7 @@
 coin = {
 	x = 0,
 	y = 0,
-	radius = 20,
+	radius = 0.2,
 	head = true,
 	--value = 25
 }
